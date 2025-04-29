@@ -19,7 +19,7 @@
     "web_accessible_resources": [
         {
             "resources": ["icons/dku_main_logo.png"],
-            "maches": ["<all_urls>"]
+            "matches": ["https://everytime.kr/*"]
         }
     ]
 }
