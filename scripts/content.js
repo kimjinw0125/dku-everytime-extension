@@ -13,7 +13,7 @@ const observer = new MutationObserver((mutations, observer) => {
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9',
                 'Accept-Language': 'ko-KR,ko;q=0.9',
                 'Referer': 'https://everytime.kr/',}
-            }).then(response => console.log(response.text()));
+        }).then(response => console.log(response.text()));
 
         const iframe = document.createElement('iframe');
         iframe.src = 'https://everytime.kr/timetable';
@@ -22,9 +22,13 @@ const observer = new MutationObserver((mutations, observer) => {
         
         iframe.onload = () => {
             try {
-                const doc = iframe.contentDocument || iframe.contentWindow.document;
-                const data = doc.body;
-                console.log('iframe 안 내용', data);
+                setTimeout(() => {
+                    const doc = iframe.contentDocument || iframe.contentWindow.document;
+                    const timetable = doc.body.querySelectorAll("div.wrap")[1];
+                    console.log(doc.body);
+                    console.log(timetable);
+                    document.body.appendChild(timetable);
+                }, 2000);
             } 
             catch (err) {
                 console.error('iframe 접근 실패:', err);

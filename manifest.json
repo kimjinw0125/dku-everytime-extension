@@ -9,7 +9,7 @@
     },
     "content_scripts": [
         {
-            "js": ["scripts/content.js"],
+            "js": ["lib/html2canvas.min.js", "scripts/content.js"],
             "css": ["scripts/style.css"],
             "matches": [
                 "https://everytime.kr/*"
