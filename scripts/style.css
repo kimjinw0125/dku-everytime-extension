@@ -1,3 +1,77 @@
+nav {
+    background-color: rgb(41, 76, 88) !important;
+} /* 배너 */
+div#submenu {
+    background-color: rgb(101, 137, 150) !important;
+}/*게시판 종류 보는곳곳 */
 body {
     background-color: lightblue !important;
+}/*홈페이지 겉부분분 */
+
+
+a.item {
+    background-color: rgb(101, 137, 150) !important;
+}/* 책부분분 */
+footer#bottom {
+    background-color: rgb(101, 137, 150) !important;
+}/*젤 하단단 */
+div.board {
+    background-color: rgb(146, 183, 197) !important;
+}/*중앙 게시판판 */
+div.card.pconly {
+    background-color: rgb(146, 183, 197) !important;
+}/*자기정보 */
+div.menus {
+    background-color: rgb(146, 183, 197) !important;
+}/*자기정보 및에 작은 메뉴 자기 정보랑 같은색 넣어야함 */
+
+
+div.rightside .tablebody,
+div.rightside .tablebody > div.grid,
+div.rightside .tablebody > div.grid > div {
+  background-color: #e1f4fbe0 !important;
+  color: #000            !important;
 }
+
+div.rightside .tablebody {
+  width: 325px !important;
+  box-sizing: border-box !important;
+}
+
+
+/* 교시 열 숨기기 */
+div.rightside .tablebody .hour,
+div.rightside .tablebody > div > div:first-child {
+  display: none !important;
+}
+
+
+
+div.rightside .cols,
+div.rightside .grid {
+  display: block !important;        
+  width: 100% !important;           
+  max-width: none !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+div.rightside .tablebody {
+  position: static !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;      /* 부모 325px 전부 채우기 */
+  box-sizing: border-box !important;
+}
+
+
+div.rightside table td {
+  width: 55px !important;
+  box-sizing: border-box !important;
+}
+
+div.banners {
+  display: none !important;
+}    /* 배너 광고 삭제 추후 여기에 식당 메뉴 넣을시 이부분 삭제 필요 */
