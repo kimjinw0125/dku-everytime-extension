@@ -1,0 +1,81 @@
+nav {
+    background-color: rgb(41, 76, 88) !important;
+} /* 배너 */
+div#submenu {
+    background-color: rgb(101, 137, 150) !important;
+}/*게시판 종류 보는곳곳 */
+body {
+    background-color: lightblue !important;
+}/*홈페이지 겉부분분 */
+
+
+a.item {
+    background-color: rgb(101, 137, 150) !important;
+}/* 책부분분 */
+footer#bottom {
+    background-color: rgb(101, 137, 150) !important;
+}/*젤 하단단 */
+div.board {
+    background-color: rgb(146, 183, 197) !important;
+}/*중앙 게시판판 */
+div.card.pconly {
+    background-color: rgb(146, 183, 197) !important;
+}/*자기정보 */
+div.menus {
+    background-color: rgb(146, 183, 197) !important;
+}/*자기정보 및에 작은 메뉴 자기 정보랑 같은색 넣어야함 */
+
+
+div.rightside .tablebody,
+div.rightside .tablebody > div.grid,
+div.rightside .tablebody > div.grid > div {
+  background-color: #e1f4fbe0 !important;
+  color: #000            !important;
+}
+/* 1) tablebody 컨테이너 고정 폭 확인 */
+div.rightside .tablebody {
+  width: 325px !important;
+  box-sizing: border-box !important;
+}
+
+
+/* ─── 교시(n교시) 라벨 숨기기 ─── */
+div.rightside .tablebody .hour,
+div.rightside .tablebody > div > div:first-child {
+  display: none !important;
+}
+
+
+/* ─── .cols 와 .grid 모두 100% 너비 사용 ─── */
+div.rightside .cols,
+div.rightside .grid {
+  display: block !important;        /* inline-block 등 다른 display 속성 해제 */
+  width: 100% !important;           /* 부모폭(325px)을 꽉 채워 사용 */
+  max-width: none !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+
+/* 2) tablebody 를 static flow 로 */
+div.rightside .tablebody {
+  position: static !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;      /* 부모 325px 전부 채우기 */
+  box-sizing: border-box !important;
+}
+
+
+/* td 는 60px */
+div.rightside table td {
+  width: 55px !important;
+  box-sizing: border-box !important;
+}
+
+
+div.banners {
+  display: none !important;
+}    /* 배너 광고 삭제 추후 여기에 식당 메뉴 넣을시 이부분 삭제 필요 */

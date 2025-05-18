@@ -1,0 +1,48 @@
+{
+  "action": {
+    "default_icon": {
+      "16": "icons/dku_main_logo.png",
+      "48": "icons/dku_main_logo.png",
+      "128": "icons/dku_main_logo.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://everytime.kr/*"
+      ],
+      "js": [
+        "scripts/content.js",
+        "lib/html2canvas.min.js"
+      ],
+      "css": [
+        "scripts/style.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/dku_main_logo.png"],
+      "matches": ["https://everytime.kr/*"]
+    }
+  ],
+  "description": "Adds useful functions to Everytime",
+  "icons": {
+    "16": "icons/dku_main_logo.png",
+    "48": "icons/dku_main_logo.png",
+    "128": "icons/dku_main_logo.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsewzYyFSAGrLcapFEMhkOicBafBkRhfFMubetp7YBgH/dfmNuh8QlwIXxw+jP/+Z8i/GFB4A4cjoG8w+BKPpiwvjB+ZI4TWgz+yogRD7LoGnXFnfZEkWNt7eQZ1IjBzkxudhZXYWc1Dz5GgpuG8Vuqbv0U2B+SPGBUY611owgNAgpgZcuoeWW4mknLTs8bSkquQ+kRCGrD7i+Nzp3w5rdZ2/qNDFFmBbwAUWuqFu4togN+LJODCu2j66y/f9tiwRFyT07QIxr8rODVZFBCvRfMH/No9Wgj5C6kJ9dcJSEiZv+v03FHSK0PeERwYdgy2hffKwzh6l9O50qKLfCqsqJQIDAQAB",
+  "manifest_version": 3,
+  "name": "DKU_TIME",
+  "options_ui": {
+    "open_in_tab": false,
+    "page": "options.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "version": "1.0.0"
+}
