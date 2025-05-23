@@ -4,7 +4,7 @@
     "version": "1.0",
     "manifest_version": 3,
     "action": {
-        "default_popup": "popup.html",
+        "default_popup": "popup/popup.html",
         "default_icon": "icons/hello_extensions.png"
     },
     "content_scripts": [
@@ -18,7 +18,7 @@
     ],
     "web_accessible_resources": [
         {
-            "resources": ["icons/dku_main_logo.png"],
+            "resources": ["icons/dku_main_logo.png", "icons/dku_lightbulb_bear.png"],
             "matches": ["https://everytime.kr/*"]
         }
     ]
