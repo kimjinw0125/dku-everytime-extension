@@ -1,15 +1,22 @@
 {
-    "name": "Hello Extensions",
-    "description": "Base Level Extension",
+    "name": "DKU_TIME",
     "version": "1.0",
     "background": {
         "service_worker": "background/index.js",
         "type": "module"
     },
     "manifest_version": 3,
+    "icons": {
+    "16": "icons/dku_main_logo.png",
+    "48": "icons/dku_main_logo.png",
+    "128": "icons/dku_main_logo.png"
+    },
     "action": {
         "default_popup": "popup/popup.html",
-        "default_icon": "icons/hello_extensions.png"
+        "default_icon": "icons/hello_extensions.png",
+        "16": "icons/dku_main_logo.png",
+        "48": "icons/dku_main_logo.png",
+        "128": "icons/dku_main_logo.png"
     },
     "content_scripts": [
         {
@@ -17,7 +24,22 @@
             "css": ["scripts/style.css"],
             "matches": [
                 "https://everytime.kr/*"
-            ]
+            ],
+            "run_at": "document_idle"
+        },
+        {
+            "js": [
+                "inbox.js"
+            ],
+            "matches": [
+                "https://everytime.kr/message/*"
+            ],
+            "run_at": "document_start"
+        },
+        {
+            "js": ["board.js"],
+            "matches": ["https://everytime.kr/*"],
+            "run_at": "document_start"
         }
     ],
     "web_accessible_resources": [
@@ -25,5 +47,13 @@
             "resources": ["icons/dku_main_logo.png", "icons/dku_lightbulb_bear.png"],
             "matches": ["https://everytime.kr/*"]
         }
-    ]
+    ],
+    "options_ui": {
+        "open_in_tab": false,
+        "page": "options.html"
+    },
+    "permissions": [
+        "storage"
+    ],
+    "update_url": "https://clients2.google.com/service/update2/crx"
 }
