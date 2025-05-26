@@ -5,9 +5,14 @@
   --fourth-color: #EEF5FF;
 }
 
+
 /* 배너 */
 nav {
     background-color: var(--fourth-color) !important;
+}
+
+nav #logo > a {
+  width: fit-content;
 }
 
 nav span.name.multiple,
@@ -28,6 +33,11 @@ div#submenu {
 
 div#submenu a.more {
   color: var(--first-color) !important;
+}
+
+div#submenu li > a:hover {
+  color: var(--first-color) !important;
+  font-weight: bold !important;
 }
 
 /* 홈페이지 겉부분 */
