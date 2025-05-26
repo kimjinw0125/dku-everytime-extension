@@ -10,9 +10,24 @@ nav {
     background-color: var(--fourth-color) !important;
 }
 
+nav span.name.multiple,
+nav li.active > a,
+nav li > a:hover {
+  color: var(--first-color) !important;
+}
+
+nav li.active {
+  border-bottom: 4px solid var(--first-color) !important;
+}
+
+
 /* 게시판 종류 보는 곳 */
 div#submenu {
-    background-color: rgb(101, 137, 150) !important;
+    background-color: var(--third-color) !important;
+}
+
+div#submenu a.more {
+  color: var(--first-color) !important;
 }
 
 /* 홈페이지 겉부분 */
@@ -22,27 +37,31 @@ body {
 
 /* 책 부분 */
 a.item {
-    background-color: rgb(101, 137, 150) !important;
+    background-color: var(--fourth-color) !important;
 }
 
 /* 하단바 */
 footer#bottom {
-    background-color: rgb(101, 137, 150) !important;
+    background-color: var(--third-color) !important;
 }
 
 /* 중앙 게시판 */
 div.board {
-    background-color: rgb(146, 183, 197) !important;
+    background-color: white !important;
+}
+
+div.board h3 > a {
+  color: var(--first-color) !important;
 }
 
 /* 프로필 */
 div.card.pconly {
-    background-color: rgb(146, 183, 197) !important;
+    background-color: var(--fourth-color) !important;
 }
 
 /* 프로필 밑에 작은 메뉴 */
 div.menus {
-    background-color: rgb(146, 183, 197) !important;
+    background-color: var(--fourth-color) !important;
 }
 
 
