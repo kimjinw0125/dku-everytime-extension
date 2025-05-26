@@ -1,29 +1,49 @@
+:root {
+  --first-color: #176B87;
+  --second-color: #86B6F6;
+  --third-color: #B4D4FF;
+  --fourth-color: #EEF5FF;
+}
+
+/* 배너 */
 nav {
-    background-color: rgb(41, 76, 88) !important;
-} /* 배너 */
+    background-color: var(--fourth-color) !important;
+}
+
+/* 게시판 종류 보는 곳 */
 div#submenu {
     background-color: rgb(101, 137, 150) !important;
-}/*게시판 종류 보는곳곳 */
+}
+
+/* 홈페이지 겉부분 */
 body {
-    background-color: lightblue !important;
-}/*홈페이지 겉부분분 */
+    background-color: white !important;
+}
 
-
+/* 책 부분 */
 a.item {
     background-color: rgb(101, 137, 150) !important;
-}/* 책부분분 */
+}
+
+/* 하단바 */
 footer#bottom {
     background-color: rgb(101, 137, 150) !important;
-}/*젤 하단단 */
+}
+
+/* 중앙 게시판 */
 div.board {
     background-color: rgb(146, 183, 197) !important;
-}/*중앙 게시판판 */
+}
+
+/* 프로필 */
 div.card.pconly {
     background-color: rgb(146, 183, 197) !important;
-}/*자기정보 */
+}
+
+/* 프로필 밑에 작은 메뉴 */
 div.menus {
     background-color: rgb(146, 183, 197) !important;
-}/*자기정보 및에 작은 메뉴 자기 정보랑 같은색 넣어야함 */
+}
 
 
 div.rightside .tablebody,
@@ -75,7 +95,7 @@ div.rightside table td {
   box-sizing: border-box !important;
 }
 
-
+/* 배너 광고 삭제 */
 div.banners {
   display: none !important;
-}    /* 배너 광고 삭제 추후 여기에 식당 메뉴 넣을시 이부분 삭제 필요 */
+}
