@@ -37,7 +37,10 @@ div#submenu a.more {
 
 div#submenu li > a:hover {
   color: var(--first-color) !important;
-  font-weight: bold !important;
+}
+
+div#submenu li > a.active {
+  color: var(--first-color) !important;
 }
 
 /* 홈페이지 겉부분 */
