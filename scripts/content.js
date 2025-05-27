@@ -20,7 +20,7 @@ const observer = new MutationObserver((mutations, obs) => {
   
   function removeAds(root = document) {
     adSelectors.forEach(sel => {
-      root.querySelectorAll(sel).forEach(el => el.remove());
+      root.querySelectorAll(sel).forEach(el => el.parentElement.remove());
     });
   }
 
