@@ -39,24 +39,39 @@ div.rightside .tablebody {
 }
 
 
-/* ─── 교시(n교시) 라벨 숨기기 ─── */
-div.rightside .tablebody .hour,
-div.rightside .tablebody > div > div:first-child {
-  display: none !important;
-}
 
-
-/* ─── .cols 와 .grid 모두 100% 너비 사용 ─── */
-div.rightside .cols,
-div.rightside .grid {
-  display: block !important;        /* inline-block 등 다른 display 속성 해제 */
-  width: 100% !important;           /* 부모폭(325px)을 꽉 채워 사용 */
-  max-width: none !important;
+/* .cols: 요일별 수업 배치용 셀 */
+div.rightside .cols {
+  position: relative !important;
+  width: 70px !important;
+  display: block !important;
   box-sizing: border-box !important;
   margin: 0 !important;
   padding: 0 !important;
 }
 
+/* .grid: 시간표 라인용 */
+div.rightside .grid {
+  position: relative !important;
+  width: 100% !important;
+  display: block !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+div.rightside .subject {
+  position: absolute !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 4px 6px !important;
+  box-sizing: border-box !important;
+  font-size: 12px !important;
+  overflow: hidden;
+  white-space: normal !important;
+  word-break: break-word !important;
+  color: #000 !important;
+}
 
 
 /* 2) tablebody 를 static flow 로 */
@@ -71,11 +86,11 @@ div.rightside .tablebody {
 
 /* td 는 60px */
 div.rightside table td {
-  width: 55px !important;
+  width: 60px !important;
   box-sizing: border-box !important;
 }
 
 
 div.banners {
   display: none !important;
-}    /* 배너 광고 삭제 추후 여기에 식당 메뉴 넣을시 이부분 삭제 필요 */
+}    /* 배너 광고 삭제 추후 여기에 식당 메뉴 넣을시 이부분 삭제 필요 */  

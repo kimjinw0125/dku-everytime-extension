@@ -69,7 +69,7 @@ observer.observe(document.body, {
     });
   }
 
-  // 1) div.rightside 대기
+  //1) div.rightside 대기
   let rightside;
   try {
     rightside = await waitFor('div.rightside');
@@ -105,11 +105,12 @@ observer.observe(document.body, {
         rightside.appendChild(clone);
 
         // 5) 스타일 보정 (폭 100% 등)
-        rightside.style.position = 'relative';
-        rightside.style.zIndex   = '10';
-        clone.style.width        = '100%';
-        clone.style.maxWidth     = 'none';
+        rightside.style.position = 'relative'
+        rightside.style.zIndex   = '1';
+        clone.style.width        = '325px';
+        clone.style.maxWidth     = '100%';
         clone.style.margin       = '0';
+
 
         // 6) 임시 iframe 제거
         iframe.remove();
@@ -133,6 +134,7 @@ observer.observe(document.body, {
             .slice(0, 9)     // 0번째부터 8번째까지
             .forEach(el => el.remove());
         }
+        
         const cols = rightside.querySelectorAll('div.cols');
         (() => {
             const subjects = Array.from(rightside.querySelectorAll('div.subject'));
@@ -153,7 +155,7 @@ observer.observe(document.body, {
             // 2) 그룹별 Hue 분할 지정
             const groupColors = {};
             groups.forEach((grp, i) => {
-                // 0 ≤ i < gCount
+                // 0 ≤ i < gCount 
                 const hue = Math.round(i * 360 / gCount);
                 groupColors[grp] = `hsl(${hue},60%,85%)`;
             });
