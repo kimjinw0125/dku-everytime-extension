@@ -33,6 +33,7 @@ header > div {
 
 footer {
   display: flex;
+  justify-content: space-between;
   padding: 5px;
   border-top: #EEF5FF 1px solid;
   margin-top: 5px;
@@ -44,6 +45,12 @@ footer > .left > button {
   background-color: #EEF5FF;
   color: #176B87;
   padding: 3px;
+  cursor: pointer;
+}
+
+footer > .right img {
+  width: 24px;
+  height: 24px;
 }
 
 img.top-icon {

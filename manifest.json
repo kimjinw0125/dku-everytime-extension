@@ -50,10 +50,11 @@
     ],
     "options_ui": {
         "open_in_tab": false,
-        "page": "options.html"
+        "page": "options/options.html"
     },
     "permissions": [
-        "storage"
+        "storage",
+        "tabs"
     ],
     "update_url": "https://clients2.google.com/service/update2/crx"
 }
