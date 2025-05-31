@@ -1,4 +1,25 @@
+chrome.runtime.sendMessage({ type: "refreshed"});
+
+function applyCSS(fileName) {
+  if (document.getElementById("dynamic-style")) return;
+
+  const link = document.createElement("link");
+  link.id = "dynamic-style";
+  link.rel = "stylesheet";
+  link.type = "text/css";
+  link.href = chrome.runtime.getURL(fileName);
+  document.head.appendChild(link);
+
+  console.log(link.href);
+}
+
+chrome.storage.local.get(["adguard"], (settings) => {
+  if (settings.adguard === false) applyCSS("scripts/activeBanners.css");
+})
+
 // ─── ① 로고 바꾸기 ───
+
+
 const observer = new MutationObserver((mutations, obs) => {
   const logoImg = document.querySelector("nav #logo a img");
   if (logoImg) {
@@ -7,40 +28,14 @@ const observer = new MutationObserver((mutations, obs) => {
     obs.disconnect();
   }
 });
-(function adBlocker() {
-  const adSelectors = [
-    '[id^="ad-"]',         
-    '[class*="ad-"]',     
-    '.ad', '.ads',        
-    '.banner', '.banner-ad',
-    '#sponsor', '.sponsor',
-    'iframe[src*="ads"]'
-  ];
 
-  
-  function removeAds(root = document) {
-    adSelectors.forEach(sel => {
-      root.querySelectorAll(sel).forEach(el => el.parentElement.remove());
-    });
+chrome.runtime.onMessage.addListener((msg) => {
+  if (msg.type === "adguard") {
+    applyCSS("scripts/adguard.css");
   }
+});
 
 
-  removeAds();
-
-  new MutationObserver((mutations) => {
-    mutations.forEach(m => {
-      if (m.addedNodes.length) {
-        m.addedNodes.forEach(node => {
-          if (!(node instanceof HTMLElement)) return;
-          removeAds(node);
-        });
-      }
-    });
-  }).observe(document.body, {
-    childList: true,
-    subtree: true
-  });
-})();
 observer.observe(document.body, {
   childList: true,
   subtree: true

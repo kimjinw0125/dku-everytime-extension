@@ -1,0 +1,8 @@
+/* 배너 광고 활성화 */
+div.banners {
+  display: block !important;
+}
+
+div.card:has(.banner) {
+  display: block !important;
+}

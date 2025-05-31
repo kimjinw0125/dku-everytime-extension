@@ -1,5 +1,8 @@
-chrome.runtime.onStartup.addListener(() => {
-    console.log("background.js is running");
-})
+import { reloadTab, initContentFunction } from "./utils.js";
 
-console.log("ㅇㅇ");
+
+chrome.runtime.onMessage.addListener((message) => {
+    if (message.type === "setting-changed") {
+        reloadTab();
+    }
+})

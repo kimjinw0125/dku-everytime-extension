@@ -21,7 +21,7 @@
     "content_scripts": [
         {
             "js": ["lib/html2canvas.min.js", "scripts/content.js"],
-            "css": ["scripts/style.css"],
+            "css": ["scripts/style.css", "scripts/theme.css"],
             "matches": [
                 "https://everytime.kr/*"
             ],
@@ -44,7 +44,11 @@
     ],
     "web_accessible_resources": [
         {
-            "resources": ["icons/dku_main_logo.png", "icons/dku_lightbulb_bear.png", "icons/github_logo.png"],
+            "resources": [
+                "scripts/activeBanners.css",
+                "icons/dku_main_logo.png",
+                "icons/dku_lightbulb_bear.png", "icons/github_logo.png"
+            ],
             "matches": ["https://everytime.kr/*"]
         }
     ],
