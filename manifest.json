@@ -44,7 +44,7 @@
     ],
     "web_accessible_resources": [
         {
-            "resources": ["icons/dku_main_logo.png", "icons/dku_lightbulb_bear.png"],
+            "resources": ["icons/dku_main_logo.png", "icons/dku_lightbulb_bear.png", "icons/github_logo.png"],
             "matches": ["https://everytime.kr/*"]
         }
     ],
